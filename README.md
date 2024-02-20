@@ -356,3 +356,7 @@ ATTRS{dual_channel}=="1", ATTR{tx_timeout_ms}="1000"
     over netlink API.
 
     <http://www.pengutronix.de/software/libsocketcan/download/>
+
+* Can-Development Read the docs:
+ 
+    <https://confluence.cern.ch/display/CANDev/CAN+development?src=sidebar>
