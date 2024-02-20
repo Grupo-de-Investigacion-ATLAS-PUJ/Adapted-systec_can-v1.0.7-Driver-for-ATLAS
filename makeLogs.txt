@@ -1,0 +1,32 @@
+make -C /lib/modules/5.14.0-362.18.1.el9_3.x86_64/build M=/home/dflorezr/Downloads/systec_can-v1.0.7 modules
+make[1]: Entering directory '/usr/src/kernels/5.14.0-362.18.1.el9_3.x86_64'
+  CC [M]  /home/dflorezr/Downloads/systec_can-v1.0.7/systec_can.o
+/home/dflorezr/Downloads/systec_can-v1.0.7/systec_can.c: In function ‘systec_can_open’:
+/home/dflorezr/Downloads/systec_can-v1.0.7/systec_can.c:660:5: error: implicit declaration of function ‘can_led_event’ [-Werror=implicit-function-declaration]
+  660 |     can_led_event (netdev, CAN_LED_EVENT_OPEN);
+      |     ^~~~~~~~~~~~~
+/home/dflorezr/Downloads/systec_can-v1.0.7/systec_can.c:660:28: error: ‘CAN_LED_EVENT_OPEN’ undeclared (first use in this function)
+  660 |     can_led_event (netdev, CAN_LED_EVENT_OPEN);
+      |                            ^~~~~~~~~~~~~~~~~~
+/home/dflorezr/Downloads/systec_can-v1.0.7/systec_can.c:660:28: note: each undeclared identifier is reported only once for each function it appears in
+/home/dflorezr/Downloads/systec_can-v1.0.7/systec_can.c: In function ‘systec_handle_status_change’:
+/home/dflorezr/Downloads/systec_can-v1.0.7/systec_can.c:945:34: error: ‘CAN_LED_EVENT_RX’ undeclared (first use in this function)
+  945 |     can_led_event (chan->netdev, CAN_LED_EVENT_RX);
+      |                                  ^~~~~~~~~~~~~~~~
+/home/dflorezr/Downloads/systec_can-v1.0.7/systec_can.c: In function ‘systec_can_tx_echo’:
+/home/dflorezr/Downloads/systec_can-v1.0.7/systec_can.c:1008:34: error: ‘CAN_LED_EVENT_TX’ undeclared (first use in this function)
+ 1008 |     can_led_event (chan->netdev, CAN_LED_EVENT_TX);
+      |                                  ^~~~~~~~~~~~~~~~
+/home/dflorezr/Downloads/systec_can-v1.0.7/systec_can.c: In function ‘systec_can_close’:
+/home/dflorezr/Downloads/systec_can-v1.0.7/systec_can.c:1255:28: error: ‘CAN_LED_EVENT_STOP’ undeclared (first use in this function)
+ 1255 |     can_led_event (netdev, CAN_LED_EVENT_STOP);
+      |                            ^~~~~~~~~~~~~~~~~~
+/home/dflorezr/Downloads/systec_can-v1.0.7/systec_can.c: In function ‘systec_can_alloc_channel’:
+/home/dflorezr/Downloads/systec_can-v1.0.7/systec_can.c:2916:5: error: implicit declaration of function ‘devm_can_led_init’ [-Werror=implicit-function-declaration]
+ 2916 |     devm_can_led_init (netdev);
+      |     ^~~~~~~~~~~~~~~~~
+cc1: some warnings being treated as errors
+make[2]: *** [scripts/Makefile.build:299: /home/dflorezr/Downloads/systec_can-v1.0.7/systec_can.o] Error 1
+make[1]: *** [Makefile:1928: /home/dflorezr/Downloads/systec_can-v1.0.7] Error 2
+make[1]: Leaving directory '/usr/src/kernels/5.14.0-362.18.1.el9_3.x86_64'
+make: *** [Makefile:22: all] Error 2
