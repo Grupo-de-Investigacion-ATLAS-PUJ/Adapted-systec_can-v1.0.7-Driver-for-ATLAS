@@ -19,7 +19,7 @@
  * MA 02111-1307 USA
  *
  * This driver has been modified for the porpuse of instalation in
- * Almalinux 9 machines. The original driver was made for kernel 2.6
+ * Almalinux 9 machines. The original driver was made for kernel 5.15
  * and the changes were made to make it compatible with kernel 5.14
  * The changes were made by the students of the Pontificia Universidad Javeriana
  * for the ATLAS collaboration.
