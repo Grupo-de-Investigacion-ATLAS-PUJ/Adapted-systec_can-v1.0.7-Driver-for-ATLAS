@@ -19,6 +19,7 @@ CONFIG_CAN_CALC_BITTIMING=y
 ```shell
 $ sudo rpm -i CANUtilities.rpm
 ```
+Remember to have DKMS, or else you wont be able to run it!
 
 ## Supported features
 
